@@ -316,24 +316,35 @@ B<YAZ_PORT>    Port number to forward transformed SRU queries to.
 
 All resources have one entry per line, and each entry has fields that are tab delimited.  Spacing within a field should be standardised to single spaces.  The "types" file should be non-existant if named entities are also listed as having ontology nodes.
 
-<AlvisDir>/resources/NEs :   Lists (text-occurence,canonical-form) for named entities.
+<AlvisDir>/resources/lemmas :   Lists (text-occurrence,lemma-form) for lemmatising words.
 
-<AlvisDir>/resources/onto_nodes :    Lists (canonical-form,ontology-node) for terms and named entities that are located in the ontology.
+<AlvisDir>/resources/NEs :   Lists (text-occurrence,canonical-form) for matching named entities.
+
+<AlvisDir>/resources/onto_nodes :    Lists (canonical-form,ontology-node) for matching lemmas, terms and named entities that are located in the ontology.
 
 <AlvisDir>/resources/onto_paths :  Lists (ontology-node,ontology-path) giving fully expanded path for each node.
 
-<AlvisDir>/resources/terms :   Lists (text-occurence,canonical-form) for terms.
+<AlvisDir>/resources/terms :   Lists (text-occurence,canonical-form) for matching terms.
 
 <AlvisDir>/resources/types :   Lists (canonical-form,type) for named entities.  Types are short text items (e.g., 'species', 'company', 'person') used to categorise named entities when no ontology is in use.
 
 Entries in "NEs" and "terms" are applied as rules to query words, with longest match applying first.  Once all these are done, the typing or ontology forms are applied.
 
+Resources are best manipulated and iported/exported as a
+single XML file using the routines of
+B<zebractl>(1).
+
 =head1 SEE ALSO
 
-Alvis::QueryFilter, HTTP::Daemon.
+B<Alvis::QueryFilter>(3), 
+B<zebractl>(1), 
+B<zebrad>(1), 
+B<HTTP::Daemon>(3).
 
 See http://www.alvis.info/alvis/Architecture_2fFormats#queryfilter 
 for sample use, the XML formats and the schema.
+See http://www.alvis.info/alvis/Architecture_2fFormats#filterresources
+for description of the linguistic resources and an XML Schema.
 
 =head1 AUTHOR
 

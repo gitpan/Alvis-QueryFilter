@@ -20,7 +20,7 @@ use URI::Escape;
 
 use strict;
 
-our $VERSION = '0.2';
+our $VERSION = '0.3';
 our $verbose = 0;
 
 my ($ERR_OK,
@@ -1492,7 +1492,9 @@ The argument is a reference to the response text.
 
 =head1 SEE ALSO
 
-See Alvis::Treetagger, run_QF.pl
+See 
+B<Alvis::Treetagger>(3), 
+B<run_QF.pl>(1).
 
 See http://www.alvis.info/alvis/Architecture_2fFormats#queryfilter 
 for the XML formats and the schema.

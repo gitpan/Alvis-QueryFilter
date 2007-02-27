@@ -6,7 +6,7 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     NAME         => 'Alvis::QueryFilter',
     VERSION_FROM => 'lib/Alvis/QueryFilter.pm', # finds \$VERSION
-    AUTHOR       => 'Kimmo Valtonen, Wray Buntine, Vladimir Poroshin (a.u.thor@a.galaxy.far.far.away)',
+    AUTHOR       => 'Kimmo Valtonen, Wray Buntine, Vladimir Poroshin',
     ABSTRACT     => 'Alvis query filter for SRU',
     PREREQ_PM    => {
                      'Test::Simple' => 0.44,
